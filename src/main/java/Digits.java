@@ -7,12 +7,10 @@ public class Digits
 
 	public Digits(int num)
 	{ /* to be implemented in part (a) */ 
-	  ArrayList<Integer> balls = new ArrayList<Integer>();	  
-          for(int i = num; i > 0; i/= 10) balls.add(i%10);
 	  digitList = new ArrayList<Integer>();
-	  for(int i = balls.size()-1; i >= 0; i--){
-	    digitList.add(balls.get(i)); 
-	  }	    
+	  for(int i = num; i > 0; i/=10){
+	    digitList.add(0, i%10); 
+          }	    
 	}
 
 	public boolean isStrictlyIncreasing()
